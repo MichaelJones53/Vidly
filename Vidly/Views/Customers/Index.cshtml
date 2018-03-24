@@ -1,0 +1,33 @@
+﻿@model Vidly.Models.Customer[]
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+
+
+
+@if (Model.Length == 0)
+{
+    <text>We don't have any customers yet</text>
+}
+else
+{
+    <table class="table tabl-hover">
+        <thead>
+            <tr scope="col"><th>Customers</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr scope="row">
+                    <td> @Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}
+
+
