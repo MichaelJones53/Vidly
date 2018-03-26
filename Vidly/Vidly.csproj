@@ -199,10 +199,57 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803251435387_InitialModel.cs" />
+    <Compile Include="Migrations\201803251435387_InitialModel.Designer.cs">
+      <DependentUpon>201803251435387_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803251444111_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201803251444111_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201803251444111_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803251448400_AddMembershipType.cs" />
+    <Compile Include="Migrations\201803251448400_AddMembershipType.Designer.cs">
+      <DependentUpon>201803251448400_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803251450201_PopulateMembershipType.cs" />
+    <Compile Include="Migrations\201803251450201_PopulateMembershipType.Designer.cs">
+      <DependentUpon>201803251450201_PopulateMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803251458038_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201803251458038_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201803251458038_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803251735020_AddMembershipTypeAsString.cs" />
+    <Compile Include="Migrations\201803251735020_AddMembershipTypeAsString.Designer.cs">
+      <DependentUpon>201803251735020_AddMembershipTypeAsString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803251754193_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\201803251754193_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>201803251754193_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803251759551_AddMembershipTypeNames.cs" />
+    <Compile Include="Migrations\201803251759551_AddMembershipTypeNames.Designer.cs">
+      <DependentUpon>201803251759551_AddMembershipTypeNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803252037134_addBirthdateToCustomer.cs" />
+    <Compile Include="Migrations\201803252037134_addBirthdateToCustomer.Designer.cs">
+      <DependentUpon>201803252037134_addBirthdateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803252131228_AddMovieAndGenre.cs" />
+    <Compile Include="Migrations\201803252131228_AddMovieAndGenre.Designer.cs">
+      <DependentUpon>201803252131228_AddMovieAndGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803252132224_UpdateGenreTable.cs" />
+    <Compile Include="Migrations\201803252132224_UpdateGenreTable.Designer.cs">
+      <DependentUpon>201803252132224_UpdateGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -314,6 +361,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -326,6 +374,41 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803251435387_InitialModel.resx">
+      <DependentUpon>201803251435387_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803251444111_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201803251444111_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803251448400_AddMembershipType.resx">
+      <DependentUpon>201803251448400_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803251450201_PopulateMembershipType.resx">
+      <DependentUpon>201803251450201_PopulateMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803251458038_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201803251458038_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803251735020_AddMembershipTypeAsString.resx">
+      <DependentUpon>201803251735020_AddMembershipTypeAsString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803251754193_AddNameToMembershipType.resx">
+      <DependentUpon>201803251754193_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803251759551_AddMembershipTypeNames.resx">
+      <DependentUpon>201803251759551_AddMembershipTypeNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803252037134_addBirthdateToCustomer.resx">
+      <DependentUpon>201803252037134_addBirthdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803252131228_AddMovieAndGenre.resx">
+      <DependentUpon>201803252131228_AddMovieAndGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803252132224_UpdateGenreTable.resx">
+      <DependentUpon>201803252132224_UpdateGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

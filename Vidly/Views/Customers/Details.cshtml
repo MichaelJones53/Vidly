@@ -8,4 +8,13 @@
 
 <h1>@Model.Name</h1>
 
+<ul>
+    <li>
+        Membership Type: @Model.MembershipType.MembershipTypeAsString
+    </li>
+    @if (Model.BirthDate != null)
+    {
+        <li>Birthdate: @Model.BirthDate</li>
+    }
+</ul>
 
